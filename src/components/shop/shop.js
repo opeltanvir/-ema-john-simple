@@ -1,6 +1,7 @@
 import React from 'react';
 import fakeData from '../../fakeData';
 import { useState } from 'react';
+import './Shop.css';
 
 const Shop = () => {
     const first10 = fakeData.slince(0,10);
