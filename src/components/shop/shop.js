@@ -2,18 +2,25 @@ import React from 'react';
 import fakeData from '../../fakeData';
 import { useState } from 'react';
 import './Shop.css';
-import Product from '../Product/product';
+import Product from '../Product/Product';
 
 const Shop = () => {
     const first10 = fakeData.slince(0,10);
     const [products,setProducts] = useState(first10);
+    
+    const handleAddProduct = () =>{
+        // console.log('Product added');
+    } 
 
 
     return (
         <div className = "shop-container">
              <div className = "product-container">
                 {
-                    products.map(product => <product product={product}>{product.name}</product>)
+                    products.map(pd => <product
+                    handleAddProduct={handleAddProduct} 
+                    product={pd}
+                    ></product>) 
                 }
             
             </div>
